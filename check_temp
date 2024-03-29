@@ -2,9 +2,9 @@
 
 ################################################################################
 
-VERSION="Version 1.0"
+VERSION="Version 1.01"
 
-PROGNAME="check_temps"
+PROGNAME="check_temp"
 # Inspired by http://crushbeercrushcode.org/2014/07/monitoring-temperatures-with-rpi/
 
 # use the following in /etc/nagios/nrpe.d/local.cfg
