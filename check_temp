@@ -1,6 +1,6 @@
 #!/bin/bash
 
-################################################################################
+###############################################################################
 
 VERSION="Version 1.01"
 
@@ -16,7 +16,7 @@ STATE_WARNING=1
 STATE_CRITICAL=2
 STATE_UNKNOWN=3
 
-# Helper functions #############################################################
+# Helper functions ############################################################
 
 function print_revision {
    # Print the revision number
@@ -47,7 +47,7 @@ Options:
    Exit with CRITICAL status if greater than TEMPERATURE in Celcius
 __EOT
 }
-# Main #########################################################################
+# Main ########################################################################
 temp_raw=`cat /sys/class/thermal/thermal_zone0/temp`
 # Celcius Temperature
 let "tempC=$temp_raw/1000"
@@ -122,7 +122,7 @@ elif [[ "$tempC" -gt "$thresh_warn" ]]; then
    echo "TEMPERATURE WARNING - $tempC | TempC=$tempC;$thresh_warn;$thresh_crit;10;50"
    exit $STATE_WARNING
 else
-   # Temperature is stable
+   # Temperature is acceptable
    echo "TEMPERATURE OK - $tempC | TempC=$tempC;$thresh_warn;$thresh_crit;10;50"
    exit $STATE_OK
 fi
