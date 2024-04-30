@@ -6,6 +6,7 @@ VERSION="Version 1.01"
 
 PROGNAME="check_temp"
 # Inspired by http://crushbeercrushcode.org/2014/07/monitoring-temperatures-with-rpi/
+# https://web.archive.org/web/20141113073207/http://crushbeercrushcode.org/2014/07/monitoring-temperatures-with-rpi
 
 # use the following in /etc/nagios/nrpe.d/local.cfg
 #command[check_temp]=/usr/lib/nagios/plugins/check_temp -w 35 -c 40
